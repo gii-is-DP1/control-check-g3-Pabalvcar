@@ -21,11 +21,15 @@
             <input type="hidden" name="id" value="${recoveryRoom.id}"/>
             <div class="form-group has-feedback">
                 <petclinic:inputField label="Room name" name="name"/>
+                <span><form:errors path="name"></form:errors> </span>
                 <petclinic:inputField label="Room size in m2" name="size"/>
+                <span><form:errors path="size"></form:errors> </span>
                 <petclinic:checkboxField label="Secure room?" name="secure"/>
+                <span><form:errors path="secure"></form:errors> </span>
                 <div class="control-group">
-                    <petclinic:selectField name="type" label="Room type " names="${types}" size="5"/>
+                    <petclinic:selectField name="roomType" label="Room type " names="${types}" size="5"/>
                 </div>
+                <span><form:errors path="roomType"></form:errors></span>
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
